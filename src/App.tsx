@@ -1,13 +1,19 @@
 import React from 'react';
 import './App.css';
-import {sum} from './03-function/03';
+
 
 function App() {
-    debugger
-    const res = sum(sum(1, 2), sum(10, 5))
+
+    const names: Array<string> = ['Alex', 'Pavel', 'Mark'];
+    const namesList = names.map((n, i) => <li key={i}>{n}</li>);
+
+
     return (
         <div className="App">
-            React
+            <h3>React</h3>
+            <ul>
+                {namesList}
+            </ul>
         </div>
     );
 }
